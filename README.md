@@ -17,7 +17,11 @@ Una herramienta de interfaz de terminal (TUI) para Android (Termux) que permite 
 
 ## Requisitos Previos
 
-Antes de ejecutar el script, necesitas tener instalado **Termux** en tu dispositivo Android y configurar el entorno:
+Antes de ejecutar el script, necesitas tener instalado **Termux** en tu dispositivo Android pero no desde la Play Store sino siguiendo este tutorial:
+
+[https://github.com/wachin/Linux-on-Android-with-Termux](https://github.com/wachin/Linux-on-Android-with-Termux)
+
+y configurar el entorno:
 
 1.  **Actualizar paquetes:**
     ```bash
