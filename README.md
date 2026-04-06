@@ -58,13 +58,10 @@ y configurar el entorno:
 2.  **Ejecutar el script:**
     Puedes ejecutarlo sin argumentos para procesar archivos en el directorio actual:
     ```bash
-    python termux_pitch_tui_v6.py
+    python termux_pitch_tui.py
     ```
-
-    O especificar una ruta de carpeta directamente:
-    ```bash
-    python termux_pitch_tui_v6.py /sdcard/Music/MiCarpeta
-    ```
+    
+y allí al lado deben estar el o los archivos mp3
 
 ## Controles
 
@@ -87,13 +84,6 @@ El script utiliza `curses` para dibujar la interfaz en la terminal y `subprocess
   - Mapeo de streams para conservar audio y video (portada).
   - `select()` y I/O no bloqueante para leer el progreso de `ffmpeg` en tiempo real sin congelar la interfaz.
 - **Salida:** Genera un nuevo archivo con el sufijo del tono aplicado (ej. `cancion +2.mp3`).
-
-## Notas de la Versión (v6)
-
-Esta versión incluye mejoras significativas respecto a versiones anteriores:
-- **I/O No bloqueante:** Implementación de `select()` para que la animación de carga ('pulse') funcione correctamente mientras FFmpeg procesa.
-- **Parseo Robustecido:** Corrección en la lectura de tiempos (`out_time_us` vs `out_time_ms`) para evitar errores de progreso.
-- **Anti-Parpadeo:** Throttling de renderizado (máx. 1 redibujado cada 200ms) para una experiencia visual fluida.
 
 ## Licencia
 
