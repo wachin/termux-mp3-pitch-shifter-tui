@@ -132,7 +132,16 @@ El script permite ajustar el tono en un rango de ±7 semitonos:
 **Cómo salir: **
 
 * Si te arrepentiste, presiona la tecla q para volver al menú anterior.
-                     
+
+
+## Archivos de ejemplo
+
+Aquí en este repositorio están dos archivos:
+
+- Admirable - Christine D'Clario.mp3
+- Admirable - Christine D'Clario -2.mp3
+  
+el primero es el original y el segundo ha sido bajado -2 semitonos o sea -1 tono
 
 ## Cómo Funciona por dentro (Detalles Técnicos)
 
