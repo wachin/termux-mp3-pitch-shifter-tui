@@ -34,7 +34,7 @@ y configurar el entorno:
     ```
 
 3.  **Instalar FFmpeg (con soporte para librubberband):**
-    Es importante tener una versión de FFmpeg que incluya el filtro `rubberband`.
+    Es importante tener una versión de FFmpeg que incluya el filtro `rubberband`, la versión de Termux indicada en el tutorial lo tiene
     ```bash
     pkg install ffmpeg
     ```
