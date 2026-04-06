@@ -97,7 +97,7 @@ Esta versión incluye mejoras significativas respecto a versiones anteriores:
 
 ## Licencia
 
-Este proyecto se distribuye bajo la Licencia MIT. Siéntete libre de modificarlo y mejorarlo.
+Este proyecto se distribuye bajo la Licencia GPL 3. Siéntete libre de modificarlo y mejorarlo.
 
 ---
 
