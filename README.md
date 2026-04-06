@@ -2,6 +2,8 @@
 
 Una herramienta de interfaz de terminal (TUI) para Android (Termux) que permite modificar el tono (pitch) de archivos MP3 de forma sencilla y visual.
 
+**Nota:** También se puede ejecutar en Linux
+
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
 ![Platform](https://img.shields.io/badge/Platform-Termux%20%7C%20Android-green?logo=android)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
@@ -44,6 +46,10 @@ y configurar el entorno:
     ```bash
     termux-setup-storage
     ```
+    
+## Limitaciones, sólo mp3 por los metadatos
+
+El script usa banderas específicas para etiquetas ID3v2 (típicas de MP3), como `-id3v2_version 3` y `-write_id3v1 1`. Otros formatos como M4A o FLAC usan sistemas de metadatos diferentes (como el contenedor MP4 o Vorbis Comments), por lo que la conservación de portadas y títulos podría fallar si no se ajusta el código para otro formato de audio.
 
 ## Instalación y Uso
 
@@ -63,6 +69,20 @@ y configurar el entorno:
     
 y allí al lado deben estar el o los archivos mp3
 
+### Cómo ejecutarlo en Linux
+
+Ejemplo para ejecutarlo en MX Linux 23 hay que instalar FFmpeg así:
+
+```bash
+sudo apt install ffmpeg
+```
+
+y no se preocupe por python pues ya viene por defecto instalado, y para ejecutarlo poner así en una terminal en un directorio donde al lado esté un mp3:
+
+```bash
+python3 termux_pitch_tui.py
+```
+
 ## Controles
 
 Dentro de la interfaz, utiliza las siguientes teclas:
@@ -74,7 +94,47 @@ Dentro de la interfaz, utiliza las siguientes teclas:
 | `Enter`       | Seleccionar archivo / Confirmar  |
 | `q` / `Esc`   | Salir / Volver / Cancelar        |
 
-## Cómo Funciona (Detalles Técnicos)
+## Selecciona un mp3 y baja o sube de semitono
+
+Lo que ves ahí es el menú donde debes elegir cuánto quieres subir o bajar el tono de la canción que seleccionaste. 
+
+El script permite ajustar el tono en un rango de ±7 semitonos: 
+
+```bash
+-7 semitonos
+-6 semitonos
+-5 semitonos
+-4 semitonos
+-3 semitonos
+-2 semitonos
+-1 semitono
++1 semitono
++2 semitonos
++3 semitonos
++4 semitonos
++5 semitonos
++6 semitonos
++7 semitonos
+```
+     
+**Las opciones: **
+
+* Los números negativos (ej. -2 semitonos) hacen que la canción suene más grave (más baja).
+* Los números positivos (ej. +2 semitonos) hacen que la canción suene más aguda (más alta).
+* Nota: Un semitono es la unidad mínima de cambio en música (como pasar de una tecla blanca a una negra adyacente en el piano).
+          
+
+**Cómo moverte: **
+
+* Usa las flechas del teclado (Arriba ↑ / Abajo ↓) para resaltar la opción que desees.
+* Presiona Enter para comenzar el procesamiento con ese tono.
+          
+**Cómo salir: **
+
+* Si te arrepentiste, presiona la tecla q para volver al menú anterior.
+                     
+
+## Cómo Funciona por dentro (Detalles Técnicos)
 
 El script utiliza `curses` para dibujar la interfaz en la terminal y `subprocess` para interactuar con `ffmpeg` y `ffprobe`.
 
