@@ -117,19 +117,19 @@ El script permite ajustar el tono en un rango de ±7 semitonos:
 +7 semitonos
 ```
      
-**Las opciones: **
+**Las opciones:**
 
 * Los números negativos (ej. -2 semitonos) hacen que la canción suene más grave (más baja).
 * Los números positivos (ej. +2 semitonos) hacen que la canción suene más aguda (más alta).
 * Nota: Un semitono es la unidad mínima de cambio en música (como pasar de una tecla blanca a una negra adyacente en el piano).
           
 
-**Cómo moverte: **
+**Cómo moverte:**
 
 * Usa las flechas del teclado (Arriba ↑ / Abajo ↓) para resaltar la opción que desees.
 * Presiona Enter para comenzar el procesamiento con ese tono.
           
-**Cómo salir: **
+**Cómo salir:**
 
 * Si te arrepentiste, presiona la tecla q para volver al menú anterior.
 
