@@ -1,0 +1,3 @@
+# --- Archivos de Audio ---
+# Ignora todos los archivos MP3 (originales y procesados)
+*.mp3
