@@ -49,12 +49,12 @@ y configurar el entorno:
     
 ## Limitaciones, sólo mp3 por los metadatos
 
-El script usa banderas específicas para etiquetas ID3v2 (típicas de MP3), como `-id3v2_version 3` y `-write_id3v1 1`. Otros formatos como M4A o FLAC usan sistemas de metadatos diferentes (como el contenedor MP4 o Vorbis Comments), por lo que la conservación de portadas y títulos podría fallar si no se ajusta el código para otro formato de audio.
+El script usa banderas específicas para etiquetas ID3v2 (típicas de MP3), como `-id3v2_version 3` y `-write_id3v1 1`. Otros formatos como M4A o FLAC usan sistemas de metadatos diferentes (como el contenedor MP4 o Vorbis Comments), por lo que la conservación de portadas y títulos podría fallar si se ajusta el código para otro formato de audio.
 
 ## Instalación y Uso
 
 1.  **Descargar el script:**
-    Clona este repositorio o descarga el archivo `termux_pitch_tui_v6.py` directamente.
+    Clona este repositorio o descarga el archivo `termux_pitch_tui.py` directamente.
 
     ```bash
     git clone https://github.com/wachin/termux-mp3-pitch-shifter-tui
